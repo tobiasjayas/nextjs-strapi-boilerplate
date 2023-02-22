@@ -7,10 +7,10 @@ RUN yarn install
 
 COPY ./app .
 
-ENV NODE_ENV production
+ENV NODE_ENV development
 
-RUN yarn build
+# RUN yarn build
 
 EXPOSE 1337
 
-CMD ["yarn", "start"]
+CMD ["yarn", "develop"]

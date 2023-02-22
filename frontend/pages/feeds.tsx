@@ -6,15 +6,10 @@ import AccessDeniedIndicator from "components/access-denied-indicator";
 import { getSession } from "next-auth/react";
 import WithGraphQL from "lib/with-graphql";
 
-const FeedsPage: InferGetServerSidePropsType<typeof getServerSideProps> = ({
-  session,
-}) => {
-  if (!session) {
-    return <AccessDeniedIndicator />;
-  }
+const FeedsPage = () => {
 
   return (
-    <WithGraphQL session={session}>
+    <WithGraphQL session={'' as any}>
       <Head>
         <title>Feeds Page</title>
       </Head>
@@ -23,14 +18,14 @@ const FeedsPage: InferGetServerSidePropsType<typeof getServerSideProps> = ({
   );
 };
 
-export const getServerSideProps: GetServerSideProps = async ({ req }) => {
-  const session = await getSession({ req });
+// export const getServerSideProps: GetServerSideProps = async ({ req }) => {
+//   const session = await getSession({ req });
 
-  return {
-    props: {
-      session,
-    },
-  };
-};
+//   return {
+//     props: {
+//       session,
+//     },
+//   };
+// };
 
 export default FeedsPage;

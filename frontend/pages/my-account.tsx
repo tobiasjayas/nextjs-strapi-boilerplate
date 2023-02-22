@@ -9,9 +9,6 @@ import WithGraphQL from "lib/with-graphql";
 const MyAccountPage: InferGetServerSidePropsType<typeof getServerSideProps> = ({
   session,
 }) => {
-  if (!session) {
-    return <AccessDeniedIndicator />;
-  }
 
   return (
     <WithGraphQL session={session}>

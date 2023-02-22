@@ -11,6 +11,13 @@ const options = {
     GoogleProvider({
       clientId: process.env.GOOGLE_CLIENT_ID,
       clientSecret: process.env.GOOGLE_CLIENT_SECRET,
+      authorization: {
+        params: {
+          prompt: "consent",
+          access_type: "offline",
+          response_type: "code"
+        }
+      }
     }),
   ],
   secret:"5xT45s7AKNuQREg7gF9LoQSXwW/dL62hAEKKfk/rk8k=", //PUT YOUR OWN SECRET (command: openssl rand -base64 32)

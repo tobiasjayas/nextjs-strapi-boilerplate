@@ -34,11 +34,11 @@ const AddNewFeedForm = () => {
   const [body, setBody] = useState("");
   const { data:session, status } = useSession();
 
-  if (!session) {
-    return (
-      <AccessDeniedIndicator message="You need to be signed in to add a new feed!" />
-    );
-  }
+  // if (!session) {
+  //   return (
+  //     <AccessDeniedIndicator message="You need to be signed in to add a new feed!" />
+  //   );
+  // }
 
   const [
     insertFeed,
@@ -46,7 +46,7 @@ const AddNewFeedForm = () => {
   ] = useMutation(insertFeedMutation);
 
   const handleSubmit = async () => {
-    await insertFeed({ variables: { userId: session.id, body } });
+    await insertFeed({ variables: { userId: 1, body } });
 
     setBody("");
   };

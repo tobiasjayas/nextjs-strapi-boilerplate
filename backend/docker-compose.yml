@@ -17,7 +17,7 @@ services:
       DATABASE_PASSWORD: strapi
     ports:
       - "1337:1337"
-    restart: on-failure
+    restart: unless-stopped
     volumes:
       - ./app:/srv/app
 

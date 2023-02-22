@@ -17,9 +17,9 @@ const WithGraphQL = ({
       "http://localhost:1337/graphql",
     credentials: "same-origin",
     cache: new InMemoryCache(),
-    headers: {
-      authorization: `Bearer ${token}`,
-    },
+    // headers: {
+    //   authorization: `Bearer ${token}`,
+    // },
   });
 
   return <ApolloProvider client={client}>{children}</ApolloProvider>;

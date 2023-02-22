@@ -1,0 +1,28 @@
+{
+  "routes": [
+    {
+      "method": "GET",
+      "path": "/feed-page",
+      "handler": "feed-page.find",
+      "config": {
+        "policies": []
+      }
+    },
+    {
+      "method": "PUT",
+      "path": "/feed-page",
+      "handler": "feed-page.update",
+      "config": {
+        "policies": []
+      }
+    },
+    {
+      "method": "DELETE",
+      "path": "/feed-page",
+      "handler": "feed-page.delete",
+      "config": {
+        "policies": []
+      }
+    }
+  ]
+}
