@@ -38,6 +38,9 @@
       ],
       "plugin": "upload",
       "required": false
+    },
+    "link_embed": {
+      "type": "text"
     }
   }
 }

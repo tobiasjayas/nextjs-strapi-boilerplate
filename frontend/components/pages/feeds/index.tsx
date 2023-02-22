@@ -26,6 +26,7 @@ const feedPageQuery = gql`
       id
       title
       description
+      link_embed
       image {
         id
         url
@@ -65,20 +66,22 @@ const FeedsPageComponent = () => {
         <AddNewFeedForm />
       </Box> */}
       <Heading as="h1">{dataPage.feedPage.title}</Heading>
-      <Text>
-        {dataPage.feedPage.description}{" "}
-      </Text>
-      {}
+      <Text>{dataPage.feedPage.description} </Text>
       <Box>
         <img src={"http://localhost:1337" + dataPage.feedPage.image.url} />
         <Box pt={8}></Box>
-        <video width="400" controls>
+        {/* <video width="400" controls>
           <source
             src={"http://localhost:1337" + dataPage.feedPage.video.url}
             type="video/mp4"
           />
-        </video>
+        </video> */}
+        <div
+          className="product-des"
+          dangerouslySetInnerHTML={{ __html: dataPage.feedPage.link_embed }}
+        />
       </Box>
+
       {/* {fetchFeedsData.feeds.map((feed: IFeed) => {
         return (
           <Box key={feed.id}>
