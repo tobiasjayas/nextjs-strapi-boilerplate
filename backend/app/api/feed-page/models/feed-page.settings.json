@@ -2,7 +2,7 @@
   "kind": "singleType",
   "collectionName": "feed_pages",
   "info": {
-    "name": "feed-page",
+    "name": "Post",
     "description": ""
   },
   "options": {

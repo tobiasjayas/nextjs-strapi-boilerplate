@@ -26,7 +26,7 @@ const Navbar: NextComponentType = () => {
   const linksForAllUsers = [
     {
       id: "home",
-      label: "Home",
+      label: "Demo",
       href: "/",
     },
   ];
@@ -132,11 +132,11 @@ const Navbar: NextComponentType = () => {
               </Stack>
             </Box>
             <Box>
-              <Stack isInline spacing={4} align="center">
+              {/* <Stack isInline spacing={4} align="center">
                 {themeToggleButtonNode()}
                 {signInButtonNode()}
                 {signOutButtonNode()}
-              </Stack>
+              </Stack> */}
             </Box>
           </Stack>
         </Box>

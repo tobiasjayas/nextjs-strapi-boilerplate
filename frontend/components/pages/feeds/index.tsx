@@ -79,13 +79,13 @@ const FeedsPageComponent = () => {
           />
         </video>
       </Box>
-      {fetchFeedsData.feeds.map((feed: IFeed) => {
+      {/* {fetchFeedsData.feeds.map((feed: IFeed) => {
         return (
           <Box key={feed.id}>
             <Feed feed={feed} />
           </Box>
         );
-      })}
+      })} */}
     </Stack>
   );
 };
